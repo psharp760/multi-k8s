@@ -7,7 +7,7 @@ docker psuh psharp760/multi-worker:latest
 
 docker push psharp760/multi-client:$SHA
 docker push psharp760/multi-server:$SHA
-docker psuh psharp760/multi-worker:$SHA
+docker push psharp760/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=psharp760/multi-server:$SHA
